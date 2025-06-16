@@ -1,6 +1,12 @@
 name: Windows tests
 
 on:
+  push:
+    branches:
+      - CI_for_WoA 
+      - main
+      - maintenance/**
+      
   pull_request:
     branches:
       - main
