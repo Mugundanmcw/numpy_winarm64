@@ -132,7 +132,7 @@ jobs:
   clang-cl_win_arm64:
     name: Clang-cl, arm64 python
     runs-on: windows-11-arm
-    if: github.repository == 'numpy/numpy'
+    # if: github.repository == 'numpy/numpy'
 
     steps:
       - name: Checkout
