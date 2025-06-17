@@ -151,9 +151,10 @@ jobs:
       - name: Setup LLVM for ARM64
         uses: ./.github/windows_arm64_steps
 
-      - name: Install dependencies
+      - name: Install build dependencies from PyPI
         run: |
           pip install -r requirements/build_requirements.txt
+          pip install -r requirements/ci_requirements.txt
 
       - name: Build NumPy with Clang-cl (Win-ARM64)
         run: |
