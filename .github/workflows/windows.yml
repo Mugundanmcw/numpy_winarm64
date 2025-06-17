@@ -158,7 +158,7 @@ jobs:
       - name: Build NumPy with Clang-cl (Win-ARM64)
         run: |
           "[binaries]","c = 'clang-cl'","cpp = 'clang-cl'","ar = 'llvm-lib'","c_ld = 'lld-link'","cpp_ld = 'lld-link'" | Out-File $PWD/clang-cl-arm64.ini -Encoding ascii
-          spin build -j2 -- --vsenv --native-file=$PWD/clang-cl-arm64.ini
+          spin build --with-scipy-openblas=32 -j2 -- --vsenv --native-file=$PWD/clang-cl-arm64.ini
 
       - name: Install test dependencies
         run: |
